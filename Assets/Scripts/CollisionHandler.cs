@@ -8,12 +8,19 @@ public class CollisionHandler : MonoBehaviour
       case "Friendly":
         break;
       case "Finish":
-        Invoke("LoadNextLevel", 2f);
+        StartSuccessSequence();
         break;
       default:
         StartCrashSequence();
         break;
     }
+  }
+
+  void StartSuccessSequence()
+  {
+    // TODO: Add vfx and audio
+    GetComponent<Movement>().enabled = false;
+    Invoke("LoadNextLevel", 2f);
   }
   void StartCrashSequence()
   {
