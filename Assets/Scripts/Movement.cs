@@ -10,7 +10,9 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [SerializeField] AudioClip thrustSound;
     [SerializeField] ParticleSystem thrusterParticles;
-    Rigidbody rb;
+    [SerializeField] ParticleSystem leftSideThrusterParticles;
+    [SerializeField] ParticleSystem rightSideThrusterParticles;
+  Rigidbody rb;
 
     AudioSource audioSource;
 
@@ -52,10 +54,16 @@ public class Movement : MonoBehaviour
       float rotationInput = rotation.ReadValue<float>();
       if(rotationInput < 0) {
         transform.Rotate(Vector3.forward * rotationForce * Time.fixedDeltaTime);
+        leftSideThrusterParticles.Play();
       }
       if(rotationInput > 0) {
         transform.Rotate(Vector3.back * rotationForce * Time.fixedDeltaTime);
+        rightSideThrusterParticles.Play();
       }
+    }
+    else {
+      leftSideThrusterParticles.Stop();
+      rightSideThrusterParticles.Stop();
     }
   }
 }
