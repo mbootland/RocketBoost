@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+  [SerializeField] AudioClip crashSound;
+  [SerializeField] AudioClip successSound;
    void OnCollisionEnter(Collision collision) {
     switch(collision.gameObject.tag) {
       case "Friendly":
@@ -18,12 +20,13 @@ public class CollisionHandler : MonoBehaviour
 
   void StartSuccessSequence()
   {
-    // TODO: Add vfx and audio
+    GetComponent<AudioSource>().PlayOneShot(successSound);
     GetComponent<Movement>().enabled = false;
     Invoke("LoadNextLevel", 2f);
   }
   void StartCrashSequence()
   {
+    GetComponent<AudioSource>().PlayOneShot(crashSound);
     GetComponent<Movement>().enabled = false;
     Invoke("ReloadLevel", 2f);
   }

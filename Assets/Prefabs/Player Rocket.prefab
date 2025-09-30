@@ -162,6 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690089e7b240a8747bfe906fbd202d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionHandler
+  crashSound: {fileID: 8300000, guid: 2fa6391eff2f8e843a104aabe3dc0d23, type: 3}
+  successSound: {fileID: 8300000, guid: 575003c3a69078d47838eb1ff8e0acf7, type: 3}
 --- !u!82 &-4405762609674783157
 AudioSource:
   m_ObjectHideFlags: 0
