@@ -35,11 +35,7 @@ public class Movement : MonoBehaviour
   {
     if (thrust.IsPressed())
     {
-      rb.AddRelativeForce(Vector3.up * thrustForce);
-      thrusterParticles.Play();
-      if(!audioSource.isPlaying) {
-        audioSource.PlayOneShot(thrustSound);
-      }
+      engageThrusters();
     }
     else {
       audioSource.Stop();
@@ -51,19 +47,37 @@ public class Movement : MonoBehaviour
   {
     if (rotation.IsPressed())
     {
-      float rotationInput = rotation.ReadValue<float>();
-      if(rotationInput < 0) {
-        transform.Rotate(Vector3.forward * rotationForce * Time.fixedDeltaTime);
-        leftSideThrusterParticles.Play();
-      }
-      if(rotationInput > 0) {
-        transform.Rotate(Vector3.back * rotationForce * Time.fixedDeltaTime);
-        rightSideThrusterParticles.Play();
-      }
+      Rotate();
     }
     else {
       leftSideThrusterParticles.Stop();
       rightSideThrusterParticles.Stop();
+    }
+  }
+
+
+
+  void engageThrusters()
+  {
+    rb.AddRelativeForce(Vector3.up * thrustForce);
+    thrusterParticles.Play();
+    if (!audioSource.isPlaying)
+    {
+      audioSource.PlayOneShot(thrustSound);
+    }
+  }
+
+  void Rotate() {
+    float rotationInput = rotation.ReadValue<float>();
+    if (rotationInput < 0)
+    {
+      transform.Rotate(Vector3.forward * rotationForce * Time.fixedDeltaTime);
+      leftSideThrusterParticles.Play();
+    }
+    if (rotationInput > 0)
+    {
+      transform.Rotate(Vector3.back * rotationForce * Time.fixedDeltaTime);
+      rightSideThrusterParticles.Play();
     }
   }
 }
