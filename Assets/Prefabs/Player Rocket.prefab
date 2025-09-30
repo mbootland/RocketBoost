@@ -105,7 +105,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   thrustSound: {fileID: 8300000, guid: 0b30e9d2b727e8346a3ec5eb16416153, type: 3}
-  thrusterParticles: {fileID: 0}
+  thrusterParticles: {fileID: 3833448135247574356}
 --- !u!54 &3687513483379841448
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,8 +170,6 @@ MonoBehaviour:
   successSound: {fileID: 8300000, guid: 575003c3a69078d47838eb1ff8e0acf7, type: 3}
   successParticles: {fileID: 1993412309000161227}
   crashParticles: {fileID: 1379582377003948973}
-  boosterParticles: {fileID: 0}
-  sideThrustersParticles: {fileID: 0}
 --- !u!82 &-4405762609674783157
 AudioSource:
   m_ObjectHideFlags: 0
@@ -522,6 +520,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+--- !u!198 &3833448135247574356 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198100719057022332, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
+  m_PrefabInstance: {fileID: 4002837267037296680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4007468078368014108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4940884351362868, guid: a3553fd250eb92d4091bebde350c6739, type: 3}
