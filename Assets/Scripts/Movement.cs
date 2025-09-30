@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction thrust;
     [SerializeField] InputAction rotation;
     [SerializeField] AudioClip thrustSound;
+    [SerializeField] ParticleSystem thrusterParticles;
     Rigidbody rb;
 
     AudioSource audioSource;
@@ -33,12 +34,14 @@ public class Movement : MonoBehaviour
     if (thrust.IsPressed())
     {
       rb.AddRelativeForce(Vector3.up * thrustForce);
+      thrusterParticles.Play();
       if(!audioSource.isPlaying) {
         audioSource.PlayOneShot(thrustSound);
       }
     }
     else {
       audioSource.Stop();
+      thrusterParticles.Stop();
     }
   }
 
