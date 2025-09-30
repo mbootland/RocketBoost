@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
 
-    [SerializeField] float thrustForce = 35f;
-    [SerializeField] float rotationForce = 150f;
+    [SerializeField] float thrustForce = 70f;
+    [SerializeField] float rotationForce = 190f;
     [SerializeField] InputAction thrust;
     [SerializeField] InputAction rotation;
     [SerializeField] AudioClip thrustSound;

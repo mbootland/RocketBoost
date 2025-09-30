@@ -54,8 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b2eca5216f04a4e901b0c4821a24cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  thrustForce: 20
-  rotationForce: 100
+  thrustForce: 70
+  rotationForce: 190
   thrust:
     m_Name: Thrust
     m_Type: 0

@@ -888,6 +888,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2989289751703982192, guid: 8acbf914cb7f86e439e9b6b9b830374f, type: 3}
+      propertyPath: thrustForce
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989289751703982192, guid: 8acbf914cb7f86e439e9b6b9b830374f, type: 3}
+      propertyPath: rotationForce
+      value: 190
+      objectReference: {fileID: 0}
     - target: {fileID: 3516196941740278469, guid: 8acbf914cb7f86e439e9b6b9b830374f, type: 3}
       propertyPath: m_Name
       value: Player Rocket
